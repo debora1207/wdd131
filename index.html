@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<h1>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Debora Queiroz</title>
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Página pessoal de Debora Queiroz, estudante de desenvolvimento web na BYU-Pathway, com projetos e portfólio de HTML, CSS e JavaScript.">
+    <meta name="author" content="Debora Queiroz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/base.css">
 </head>
 <body>
-    <h1>Debora Queiroz</h1>
+    <header>
+        <span class="logo">🌴</span>
+        <h1>WDD 131 – Fundamentos da Web Dinâmica - Debora Queiroz</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/debora-queiroz-1a2a823a6" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/10?lang=por" target="_blank">Escritura Favorita</a>
+            <a href="#">Projeto Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Debora Queiroz</h1>
+
+        <div class="cartoes">
+            <section class="card">
+                <h2>Sobre Mim</h2>
+                <div class="sobre-mim-conteudo">
+                    <p>Sou estudante de Desenvolvimento Web na BYU-Pathway, atualmente cursando WDD 131. Tenho interesse em criar sites funcionais e bem organizados, aplicando boas práticas de HTML, CSS e JavaScript.</p>
+                    <img src="imagens/perfil.jpg" alt="Foto de perfil de Debora Queiroz" width="150" height="150">
+                </div>
+
+                <hr>
+
+                <h3>Caldas Novas, Goiás</h3>
+                <div class="lugar-especial">
+                    <img src="imagens/caldasnovas.jpeg" alt="Vista de Caldas Novas, Goiás" width="150" height="150">
+                    <p>Caldas Novas é uma cidade muito especial para mim. Conhecida por suas águas termais naturais, é um dos maiores complexos de fontes quentes do mundo, atraindo visitantes de todo o Brasil em busca de descanso, lazer e bem-estar em suas piscinas termais.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Debora Queiroz - São Paulo, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+    <script src="scripts/obterdatas.js"></script>
 </body>
 </html>

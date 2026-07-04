@@ -1,0 +1,196 @@
+:root {
+    --cor-primaria: #123c69;
+    --cor-primaria-escura: #0c2a4a;
+    --cor-destaque: #e08e2e;
+    --cor-destaque-escura: #c4741a;
+    --cor-fundo: #f7f5f2;
+    --cor-texto: #2b2b2b;
+    --cor-branco: #ffffff;
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Nunito Sans', sans-serif;
+}
+
+/* ===== Reset básico ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header .logo {
+    display: block;
+    font-size: 2rem;
+    margin: 0 auto 0.25rem auto;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header nav a {
+    position: relative;
+    color: var(--cor-branco);
+    text-decoration: none;
+    padding: 0.5rem 0.25rem;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transition: width 0.25s ease-in-out;
+}
+
+header nav a:hover {
+    color: var(--cor-destaque);
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== Main ===== */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main > h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--cor-primaria);
+}
+
+/* ===== Layout dos cards em grid ===== */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ===== Card sections ===== */
+.card {
+    background-color: var(--cor-branco);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    padding: 0.75rem;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+}
+
+.card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 0.75rem;
+}
+
+.card img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1.5rem 0;
+}
+
+/* ===== Sobre Mim: texto e foto lado a lado ===== */
+.sobre-mim-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.sobre-mim-conteudo img {
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0;
+    border: 3px solid var(--cor-destaque);
+}
+
+/* ===== Lugar especial: imagem e texto lado a lado ===== */
+.lugar-especial {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.lugar-especial img {
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+/* ===== Responsivo: telas pequenas ===== */
+@media (max-width: 500px) {
+    .sobre-mim-conteudo,
+    .lugar-especial {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--cor-primaria);
+    color: #eee;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer #ultimaModificacao {
+    color: var(--cor-destaque);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
