@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Fundamentos da Web Dinâmica - Debora Queiroz</title>
-    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Página pessoal de Debora Queiroz, estudante de desenvolvimento web na BYU-Pathway, com projetos e portfólio de HTML, CSS e JavaScript.">
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Portfólio de Debora Queiroz, estudante de desenvolvimento web na BYU-Pathway.">
     <meta name="author" content="Debora Queiroz">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/base.css">
+    <script src="scripts/obterdatas.js" defer></script>
 </head>
 <body>
     <header>
         <span class="logo">🌴</span>
-        <h1>WDD 131 – Fundamentos da Web Dinâmica - Debora Queiroz</h1>
+        <h1><span id="course-title">WDD 131 – Fundamentos da Web Dinâmica</span> - Debora Queiroz</h1>
         <nav>
             <a href="https://www.linkedin.com/in/debora-queiroz-1a2a823a6" target="_blank">LinkedIn</a>
             <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
@@ -42,6 +43,15 @@
                     <p>Caldas Novas é uma cidade muito especial para mim. Conhecida por suas águas termais naturais, é um dos maiores complexos de fontes quentes do mundo, atraindo visitantes de todo o Brasil em busca de descanso, lazer e bem-estar em suas piscinas termais.</p>
                 </div>
             </section>
+
+            <section class="card">
+                <h2>Recursos Web Dev</h2>
+                <ul class="lista-recursos">
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                </ul>
+            </section>
         </div>
     </main>
 
@@ -49,7 +59,5 @@
         <p>&copy; <span id="anoatual"></span> Debora Queiroz - São Paulo, Brasil</p>
         <p id="ultimaModificacao"></p>
     </footer>
-
-    <script src="scripts/obterdatas.js"></script>
 </body>
 </html>

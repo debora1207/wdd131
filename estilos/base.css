@@ -171,6 +171,27 @@ main > h1 {
     margin-bottom: 0;
 }
 
+/* ===== Lista de recursos ===== */
+.lista-recursos {
+    list-style: none;
+    text-align: left;
+}
+
+.lista-recursos li {
+    margin-bottom: 0.75rem;
+}
+
+.lista-recursos a {
+    color: var(--cor-primaria);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lista-recursos a:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
 /* ===== Responsivo: telas pequenas ===== */
 @media (max-width: 500px) {
     .sobre-mim-conteudo,
