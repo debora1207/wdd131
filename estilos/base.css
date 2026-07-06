@@ -42,10 +42,11 @@ header .logo {
     margin: 0 auto 0.25rem auto;
 }
 
-header h1 {
+header .titulo-header {
     margin-bottom: 1rem;
     font-size: 1.4rem;
     font-weight: 600;
+    font-family: var(--fonte-titulo);
     letter-spacing: 0.5px;
 }
 
