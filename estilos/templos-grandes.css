@@ -1,0 +1,28 @@
+@media screen and (min-width: 700px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    /* Esconde o botão de hambúrguer na visualização maior */
+    #menu-btn {
+        display: none;
+    }
+
+    /* Navegação sempre visível e em linha na visualização maior */
+    header nav {
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    header nav a {
+        display: block;
+    }
+
+    /* Grid com colunas flexíveis usando auto-fit e minmax */
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 0 2rem;
+    }
+}
