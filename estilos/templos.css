@@ -8,25 +8,25 @@
     --fonte-titulo: 'Cormorant Garamond', serif;
     --fonte-texto: 'Mulish', sans-serif;
 }
-
+ 
 /* ===== Reset básico ===== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+ 
 body {
     font-family: var(--fonte-texto);
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
 }
-
+ 
 h1, h2 {
     font-family: var(--fonte-titulo);
 }
-
+ 
 /* ===== Header ===== */
 header {
     background-color: var(--cor-primaria);
@@ -37,13 +37,13 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+ 
 header p {
     font-family: var(--fonte-titulo);
     font-size: 1.4rem;
     font-weight: 700;
 }
-
+ 
 /* Botão de hambúrguer - visível apenas na visualização móvel */
 #menu-btn {
     font-size: 1.5rem;
@@ -52,15 +52,15 @@ header p {
     color: var(--cor-branco);
     cursor: pointer;
 }
-
+ 
 #menu-btn::before {
     content: "☰";
 }
-
+ 
 #menu-btn.aberto::before {
     content: "✕";
 }
-
+ 
 /* Navegação usando Flexbox */
 header nav {
     display: flex;
@@ -68,7 +68,7 @@ header nav {
     width: 100%;
     margin-top: 1rem;
 }
-
+ 
 header nav a {
     display: none;
     color: var(--cor-branco);
@@ -78,43 +78,36 @@ header nav a {
     border-radius: 4px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-
+ 
 /* Quando o menu está aberto (mobile), os links aparecem */
 header nav.aberto a {
     display: block;
 }
-
+ 
 header nav a:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-primaria-escura);
     font-weight: 600;
 }
-
-/* ===== Main: largura limitada e centralizada ===== */
+ 
+/* ===== Main: largura limitada, centralizada, CSS Grid (1 coluna no mobile) ===== */
 main {
     max-width: 1100px;
     margin: 2rem auto;
     padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
-
+ 
 main h1 {
     text-align: center;
     color: var(--cor-primaria);
     font-size: 2rem;
     margin-bottom: 2rem;
-}
-
-/* CSS Grid para as figuras - 1 coluna na visualização móvel */
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-main h1 {
     grid-column: 1 / -1;
 }
-
+ 
 figure {
     background-color: var(--cor-branco);
     border: 1px solid #ddd;
@@ -122,19 +115,19 @@ figure {
     overflow: hidden;
     text-align: center;
 }
-
+ 
 figure img {
     width: 100%;
     height: auto;
     display: block;
 }
-
+ 
 figcaption {
     padding: 0.75rem;
     font-weight: 600;
     color: var(--cor-primaria);
 }
-
+ 
 /* ===== Footer ===== */
 footer {
     background-color: var(--cor-primaria);
@@ -143,3 +136,4 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
+ 
