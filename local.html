@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orlando, Flórida</title>
+  <meta name="description" content="Uma página informativa sobre Orlando, Flórida: dados gerais e condições do clima.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/local.css">
+  <script src="scripts/local.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Orlando, Flórida</h1>
+  </header>
+
+  <main class="page-layout">
+
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 800px)" srcset="imagens/orlando-large.webp">
+        <img src="imagens/orlando-small.webp" alt="Horizonte de Orlando, Flórida, ao entardecer" loading="lazy" width="1200" height="700">
+      </picture>
+    </section>
+
+    <section class="data-box" aria-label="Dados sobre Orlando">
+      <h2>Dados</h2>
+      <div class="info-grid">
+        <p><span class="label">Área:</span><span class="value">280,5 km²</span></p>
+        <p><span class="label">População:</span><span class="value">320.000</span></p>
+        <p><span class="label">Estado:</span><span class="value">Flórida</span></p>
+        <p><span class="label">Fuso horário:</span><span class="value">UTC-5 (EST)</span></p>
+        <p><span class="label">Idioma:</span><span class="value">Inglês</span></p>
+        <p><span class="label">Código de área:</span><span class="value">+1 (407)</span></p>
+      </div>
+    </section>
+
+    <section class="weather-box" aria-label="Clima em Orlando">
+      <h2 class="weather-heading">
+        <img src="imagens/weather-icon.svg" alt="" class="weather-icon-mobile">
+        Clima
+      </h2>
+      <div class="info-grid">
+        <p><span class="label">Temperatura:</span><span class="value">45 °F</span></p>
+        <p><span class="label">Condições:</span><span class="value">Parcialmente nublado</span></p>
+        <p><span class="label">Vento:</span><span class="value">12 mph</span></p>
+        <p><span class="label">Sensação térmica:</span><span class="value" id="sensacao-termica">--</span></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="ano-atual"></span> Debora &middot; Orlando, Flórida</p>
+    <p>Última modificação: <span id="ultima-modificacao"></span></p>
+  </footer>
+
+</body>
+</html>
