@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templos Filtrados - Debora Queiroz</title>
+    <meta name="description" content="Galeria de templos com filtragem dinâmica por idade e tamanho, gerada via JavaScript.">
+    <meta name="author" content="Debora Queiroz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+    <link rel="stylesheet" href="estilos/templos-filtrados-grande.css">
+    <script src="scripts/templos-dados.js" defer></script>
+    <script src="scripts/templos-filtrados.js" defer></script>
+</head>
+<body>
+    <header>
+        <p>Álbum do Templo</p>
+        <button id="menu-btn" aria-label="Abrir menu"></button>
+        <nav>
+            <a href="#" data-filtro="todos">Página Inicial</a>
+            <a href="#" data-filtro="antigos">Antigos</a>
+            <a href="#" data-filtro="novos">Novos</a>
+            <a href="#" data-filtro="grandes">Grandes</a>
+            <a href="#" data-filtro="pequenos">Pequenos</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Templos Filtrados</h1>
+
+        <div class="galeria-templos" id="galeria-templos">
+            <!-- Cartões de templo gerados dinamicamente via JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Debora Queiroz - São Paulo, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+@media screen and (min-width: 700px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+    
+    header nav {
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    header nav a {
+        display: block;
+    }
+    
+    main {
+        padding: 0 2rem;
+    }
+
+    .galeria-templos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
