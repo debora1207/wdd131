@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento do Site - CineIndica</title>
+    <meta name="author" content="Debora Queiroz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/planejamentodosite.css">
+</head>
+<body>
+
+    <header>
+        <h1>CineIndica</h1>
+        <p>Documento de Planejamento do Site</p>
+    </header>
+
+    <main>
+
+        <section id="nome-do-site">
+            <h2>1. Nome do Site</h2>
+            <p><strong>CineIndica</strong></p>
+            <p>Escolhi esse nome porque une "cine" (cinema) com "indica", remetendo tanto às indicações de premiações
+                quanto às recomendações de filmes e séries que o site oferece. É curto, fácil de lembrar e deixa claro
+                do que se trata o site já no primeiro contato.</p>
+            <p>Disponibilidade de domínio (opcional): <code>cineindica.com.br</code></p>
+        </section>
+
+        <section id="finalidade">
+            <h2>2. Finalidade do Site</h2>
+            <p>O CineIndica é um site informativo sobre filmes e séries, reunindo dados como gênero, faixa etária
+                indicativa, críticas, indicações e vencedores de prêmios (Oscar, Globo de Ouro, Emmy). A finalidade é
+                ajudar o visitante a descobrir e avaliar títulos com rapidez, seja para decidir o que assistir, seja
+                para acompanhar o desempenho de filmes e séries nas principais premiações do audiovisual.</p>
+        </section>
+
+        <section id="cenarios">
+            <h2>3. Cenários</h2>
+            <ul>
+                <li>Quais filmes ganharam o Oscar de Melhor Filme nos últimos anos?</li>
+                <li>Essa série é adequada para assistir com toda a família?</li>
+                <li>Onde posso ver as críticas mais recentes sobre um lançamento?</li>
+            </ul>
+        </section>
+
+        <section id="cores">
+            <h2>4. Esquema de Cores</h2>
+            <p>A paleta foi pensada para remeter ao clima de cinema (tons escuros, como uma sala de projeção) com um
+                acento dourado que remete a premiações e tapetes vermelhos.</p>
+
+            <div class="paleta">
+                <div class="cor-item">
+                    <div class="amostra amostra-fundo"></div>
+                    <p><strong>#14141f</strong> — Fundo principal (--cor-fundo)</p>
+                </div>
+                <div class="cor-item">
+                    <div class="amostra amostra-destaque"></div>
+                    <p><strong>#d4af37</strong> — Destaque / prêmios / links (--cor-destaque)</p>
+                </div>
+                <div class="cor-item">
+                    <div class="amostra amostra-texto"></div>
+                    <p><strong>#f5f5f0</strong> — Texto sobre fundo escuro (--cor-texto)</p>
+                </div>
+                <div class="cor-item">
+                    <div class="amostra amostra-secundaria"></div>
+                    <p><strong>#2b2b3d</strong> — Fundo de cards / seções secundárias (--cor-secundaria)</p>
+                </div>
+            </div>
+
+            <table>
+                <caption>Onde cada cor será aplicada</caption>
+                <thead>
+                    <tr>
+                        <th>Cor</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#14141f</td>
+                        <td>Fundo geral das páginas e do cabeçalho</td>
+                    </tr>
+                    <tr>
+                        <td>#d4af37</td>
+                        <td>Títulos de destaque, ícones de prêmio, links e botões</td>
+                    </tr>
+                    <tr>
+                        <td>#f5f5f0</td>
+                        <td>Texto de parágrafos e corpo do site</td>
+                    </tr>
+                    <tr>
+                        <td>#2b2b3d</td>
+                        <td>Fundo dos cards de filmes/séries e seções alternadas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="tipografia">
+            <h2>5. Tipografia</h2>
+            <p>Duas fontes foram escolhidas para equilibrar personalidade (títulos com clima de cartaz de cinema) e
+                boa legibilidade no corpo do texto.</p>
+            <table>
+                <caption>Aplicação das fontes</caption>
+                <thead>
+                    <tr>
+                        <th>Fonte</th>
+                        <th>Uso</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bebas Neue</td>
+                        <td>Títulos (h1, h2) e nomes de filmes/séries nos cards</td>
+                        <td class="exemplo-titulo">CineIndica</td>
+                    </tr>
+                    <tr>
+                        <td>Mulish</td>
+                        <td>Corpo de texto, parágrafos, legendas e botões</td>
+                        <td class="exemplo-corpo">Descubra os vencedores do Oscar deste ano.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="wireframe">
+            <h2>6. Wireframe</h2>
+            <p>Esboços simplificados da página inicial, sem conteúdo real — apenas a relação entre os blocos de
+                layout.</p>
+
+            <div class="wireframes">
+                <figure class="wireframe-bloco">
+                    <figcaption>Visualização Mobile</figcaption>
+                    <div class="wf-mobile">
+                        <div class="wf-caixa wf-header">Cabeçalho + Menu ☰</div>
+                        <div class="wf-caixa wf-hero">Destaque (título em evidência)</div>
+                        <div class="wf-caixa wf-card">Card de filme/série</div>
+                        <div class="wf-caixa wf-card">Card de filme/série</div>
+                        <div class="wf-caixa wf-card">Card de filme/série</div>
+                        <div class="wf-caixa wf-footer">Rodapé</div>
+                    </div>
+                </figure>
+
+                <figure class="wireframe-bloco">
+                    <figcaption>Visualização Desktop</figcaption>
+                    <div class="wf-desktop">
+                        <div class="wf-caixa wf-header-desktop">Cabeçalho + Navegação (Início · Gêneros · Críticas · Prêmios)</div>
+                        <div class="wf-caixa wf-hero">Destaque (título em evidência)</div>
+                        <div class="wf-grid">
+                            <div class="wf-caixa wf-card">Card</div>
+                            <div class="wf-caixa wf-card">Card</div>
+                            <div class="wf-caixa wf-card">Card</div>
+                        </div>
+                        <div class="wf-caixa wf-footer">Rodapé</div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Debora Queiroz — Documento de Planejamento, Projeto CineIndica</p>
+    </footer>
+
+    <script>
+        document.getElementById("anoatual").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
