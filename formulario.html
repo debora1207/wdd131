@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avaliação do Produto | Formulário</title>
+  <meta name="description" content="Envie sua avaliação sobre um produto: classificação, data de instalação e recursos úteis." />
+  <link rel="stylesheet" href="estilos/avaliacao.css" />
+</head>
+<body>
+  <header class="cabecalho">
+    <span class="cabecalho__etiqueta">Rev. 1.0 · Formulário de Cliente</span>
+    <h1>Avaliação do Produto</h1>
+  </header>
+
+  <div class="pagina">
+    <main>
+      <form class="placa" action="avaliacao.html" method="get">
+
+        <div class="campo">
+          <label for="produto">Nome do Produto</label>
+          <select id="produto" name="produto" required>
+            <option value="" disabled selected>Selecione um Produto...</option>
+            <!-- As demais opções são inseridas dinamicamente por scripts/formulario.js -->
+          </select>
+        </div>
+
+        <fieldset class="campo">
+          <legend>Classificação Geral</legend>
+          <div class="classificacao">
+            <span class="classificacao__pad">
+              <label for="classificacao-1">1 ★</label>
+              <input type="radio" id="classificacao-1" name="classificacao" value="1" required />
+            </span>
+            <span class="classificacao__pad">
+              <label for="classificacao-2">2 ★</label>
+              <input type="radio" id="classificacao-2" name="classificacao" value="2" required />
+            </span>
+            <span class="classificacao__pad">
+              <label for="classificacao-3">3 ★</label>
+              <input type="radio" id="classificacao-3" name="classificacao" value="3" required />
+            </span>
+            <span class="classificacao__pad">
+              <label for="classificacao-4">4 ★</label>
+              <input type="radio" id="classificacao-4" name="classificacao" value="4" required />
+            </span>
+            <span class="classificacao__pad">
+              <label for="classificacao-5">5 ★</label>
+              <input type="radio" id="classificacao-5" name="classificacao" value="5" required />
+            </span>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="data-instalacao">Data de Instalação</label>
+          <input type="date" id="data-instalacao" name="data-instalacao" required />
+        </div>
+
+        <fieldset class="campo">
+          <legend>Quais recursos você achou úteis? <span class="opcional">(Marque todos que se aplicam)</span></legend>
+          <div class="opcoes-checkbox">
+            <label class="opcao-checkbox" for="recurso-durabilidade">
+              <input type="checkbox" id="recurso-durabilidade" name="recursos" value="durabilidade" />
+              Durabilidade
+            </label>
+            <label class="opcao-checkbox" for="recurso-facilidade">
+              <input type="checkbox" id="recurso-facilidade" name="recursos" value="facilidade-de-uso" />
+              Facilidade de Uso
+            </label>
+            <label class="opcao-checkbox" for="recurso-desempenho">
+              <input type="checkbox" id="recurso-desempenho" name="recursos" value="desempenho" />
+              Desempenho
+            </label>
+            <label class="opcao-checkbox" for="recurso-design">
+              <input type="checkbox" id="recurso-design" name="recursos" value="design" />
+              Design
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="avaliacao">Avaliação Escrita <span class="opcional">(Opcional)</span></label>
+          <textarea id="avaliacao" name="avaliacao" rows="5"></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="nome-usuario">Seu Nome <span class="opcional">(Opcional)</span></label>
+          <input type="text" id="nome-usuario" name="nome-usuario" />
+        </div>
+
+        <div class="campo">
+          <input type="submit" value="Publicar Avaliação" />
+        </div>
+
+      </form>
+    </main>
+  </div>
+
+  <footer class="rodape">
+    <p>&copy; <span id="anoatual"></span> Debora Queiroz - São Paulo, Brasil</p>
+    <p id="ultimaModificacao"></p>
+  </footer>
+
+  <script src="scripts/produtos.js"></script>
+  <script src="scripts/formulario.js"></script>
+  <script src="scripts/rodape.js"></script>
+</body>
+</html>

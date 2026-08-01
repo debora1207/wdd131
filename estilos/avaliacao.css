@@ -1,0 +1,432 @@
+/* ======================
+   Avaliação do Produto
+   ====================== */
+
+:root {
+  --circuito-navy: #0f1a2e;
+  --circuito-navy-2: #16233c;
+  --trilha-cobre: #b5712f;
+  --led-ambar: #ffb627;
+  --led-ambar-escuro: #c8850e;
+  --papel: #f3f5f0;
+  --papel-cartao: #ffffff;
+  --tinta: #182028;
+  --tinta-suave: #4c5866;
+  --linha: #d8dcd3;
+  --erro: #b3261e;
+  --sucesso: #1f6f4a;
+
+  --fonte-mono: "IBM Plex Mono", "Space Mono", ui-monospace, monospace;
+  --fonte-sans: "IBM Plex Sans", "Work Sans", system-ui, sans-serif;
+
+  --raio: 10px;
+  --sombra: 0 10px 30px rgba(15, 26, 46, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-sans);
+  color: var(--tinta);
+  background-color: var(--papel);
+  background-image:
+    radial-gradient(circle, rgba(15, 26, 46, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--trilha-cobre);
+}
+
+/* ---------- cabeçalho ---------- */
+
+.cabecalho {
+  background-color: var(--circuito-navy);
+  color: var(--papel);
+  padding: 1.75rem 1.25rem 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid var(--led-ambar);
+  position: relative;
+}
+
+.cabecalho__etiqueta {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--led-ambar);
+  margin-bottom: 0.4rem;
+}
+
+.cabecalho h1 {
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- layout geral ---------- */
+
+.pagina {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+main {
+  display: block;
+  padding-top: 1.75rem;
+  padding-bottom: 2.5rem;
+}
+
+/* ---------- cartão do formulário ---------- */
+
+.placa {
+  background-color: var(--papel-cartao);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 1.75rem 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* trilhas decorativas nos cantos — elemento de assinatura do design */
+.placa::before,
+.placa::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--trilha-cobre);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.placa::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+  border-radius: var(--raio) 0 0 0;
+}
+
+.placa::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 var(--raio) 0;
+}
+
+fieldset {
+  border: none;
+  margin: 0 0 1.6rem;
+  padding: 0;
+}
+
+.campo {
+  margin-bottom: 1.6rem;
+}
+
+.campo:last-of-type {
+  margin-bottom: 0;
+}
+
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--tinta);
+}
+
+label .opcional,
+legend .opcional {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--trilha-cobre);
+  margin-left: 0.35rem;
+}
+
+.dica {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--tinta-suave);
+  margin-top: -0.25rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- controles de formulário ---------- */
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  font-family: var(--fonte-sans);
+  font-size: 1rem;
+  color: var(--tinta);
+  background-color: var(--papel);
+  border: 1.5px solid var(--linha);
+  border-radius: 6px;
+  padding: 0.65rem 0.75rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+select:focus-visible,
+input[type="date"]:focus-visible,
+input[type="text"]:focus-visible,
+textarea:focus-visible,
+input[type="submit"]:focus-visible {
+  outline: none;
+  border-color: var(--led-ambar-escuro);
+  box-shadow: 0 0 0 3px rgba(255, 182, 39, 0.35);
+}
+
+select:required:invalid {
+  color: var(--tinta-suave);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* ---------- classificação em formato de trilha com LEDs ---------- */
+
+.classificacao {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  position: relative;
+  padding-top: 0.25rem;
+}
+
+.classificacao::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: calc(0.25rem + 21px);
+  height: 2px;
+  background-color: var(--linha);
+  z-index: 0;
+}
+
+.classificacao__pad {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.classificacao__pad input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--linha);
+  background-color: var(--papel-cartao);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.classificacao__pad input[type="radio"]:hover {
+  border-color: var(--led-ambar-escuro);
+}
+
+.classificacao__pad input[type="radio"]:checked {
+  border-color: var(--led-ambar-escuro);
+  background-color: var(--led-ambar);
+  box-shadow: 0 0 8px 2px rgba(255, 182, 39, 0.55);
+}
+
+.classificacao__pad input[type="radio"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 182, 39, 0.35);
+}
+
+.classificacao__pad span {
+  font-size: 0.85rem;
+  color: var(--tinta-suave);
+  letter-spacing: 0.05em;
+}
+
+/* ---------- checkboxes ---------- */
+
+.opcoes-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.opcao-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.opcao-checkbox input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  accent-color: var(--trilha-cobre);
+  cursor: pointer;
+}
+
+/* ---------- botão de envio ---------- */
+
+input[type="submit"] {
+  width: 100%;
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--papel);
+  background-color: var(--circuito-navy);
+  border: none;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--circuito-navy-2);
+}
+
+input[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* ---------- página de confirmação ---------- */
+
+.confirmacao {
+  text-align: center;
+}
+
+.confirmacao__icone {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background-color: var(--led-ambar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--circuito-navy);
+}
+
+.confirmacao h2 {
+  font-family: var(--fonte-mono);
+  margin-bottom: 0.25rem;
+}
+
+.resumo {
+  text-align: left;
+  background-color: var(--papel);
+  border: 1px dashed var(--linha);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.resumo dt {
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tinta-suave);
+  margin-top: 0.7rem;
+}
+
+.resumo dt:first-child {
+  margin-top: 0;
+}
+
+.resumo dd {
+  margin: 0.15rem 0 0;
+  font-size: 1rem;
+}
+
+.contador {
+  font-family: var(--fonte-mono);
+  font-size: 0.95rem;
+  color: var(--tinta-suave);
+  border-top: 1px solid var(--linha);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contador strong {
+  color: var(--trilha-cobre);
+  font-size: 1.2rem;
+}
+
+.botao-secundario {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--fonte-mono);
+  font-size: 0.9rem;
+  color: var(--circuito-navy);
+  text-decoration: none;
+  border: 1.5px solid var(--circuito-navy);
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.botao-secundario:hover {
+  background-color: var(--circuito-navy);
+  color: var(--papel);
+}
+
+/* ---------- rodapé comum ---------- */
+
+.rodape {
+  background-color: var(--circuito-navy);
+  color: var(--papel);
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.rodape p {
+  margin: 0.2rem 0;
+}
+
+/* ---------- responsividade ---------- */
+
+@media (min-width: 600px) {
+  .classificacao {
+    gap: 0.75rem;
+  }
+
+  .placa {
+    padding: 2.25rem 2.5rem 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

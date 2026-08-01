@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avaliação do Produto | Confirmação</title>
+  <meta name="description" content="Confirmação de envio da avaliação de produto." />
+  <link rel="stylesheet" href="estilos/avaliacao.css" />
+</head>
+<body>
+  <header class="cabecalho">
+    <span class="cabecalho__etiqueta">Rev. 1.0 · Confirmação</span>
+    <h1>Avaliação Recebida</h1>
+  </header>
+
+  <div class="pagina">
+    <main>
+      <div class="placa confirmacao">
+        <div class="confirmacao__icone" aria-hidden="true">&#10003;</div>
+        <h2 id="mensagem-saudacao">Obrigado pela sua avaliação!</h2>
+        <p>Sua opinião ajuda outros clientes a escolher melhor.</p>
+
+        <section id="secao-resumo">
+          <dl class="resumo" id="lista-resumo"></dl>
+        </section>
+
+        <p class="contador">
+          Avaliações concluídas neste dispositivo:
+          <strong id="valor-contador">0</strong>
+        </p>
+
+        <a class="botao-secundario" href="formulario.html">Enviar outra avaliação</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="rodape">
+    <p>&copy; <span id="anoatual"></span> Debora Queiroz - São Paulo, Brasil</p>
+    <p id="ultimaModificacao"></p>
+  </footer>
+
+  <script src="scripts/produtos.js"></script>
+  <script src="scripts/avaliacao.js"></script>
+  <script src="scripts/rodape.js"></script>
+</body>
+</html>
