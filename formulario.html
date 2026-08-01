@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Revisão de Produto</title>
+  <title>Avaliação do Produto</title>
   <meta name="description" content="Envie sua avaliação sobre um produto: classificação, data de instalação e recursos úteis." />
-  <meta name="author" content="Debora Queiroz">
+  <meta name="author" content="Debora Queiroz" />
   <link rel="stylesheet" href="estilos/avaliacao.css" />
+  <script src="scripts/produtos.js" defer></script>
+  <script src="scripts/formulario.js" defer></script>
+  <script src="scripts/rodape.js" defer></script>
 </head>
 <body>
   <header class="cabecalho">
@@ -21,7 +24,8 @@
         <div class="campo">
           <label for="produto">Nome do Produto</label>
           <select id="produto" name="produto" required>
-            <option value="" disabled selected>Selecione um Produto...</option>     
+            <option value="" disabled selected>Selecione um produto ...</option>
+            <!-- As demais opções são inseridas dinamicamente por scripts/formulario.js -->
           </select>
         </div>
 
@@ -100,9 +104,5 @@
     <p>&copy; <span id="anoatual"></span> Debora Queiroz - São Paulo, Brasil</p>
     <p id="ultimaModificacao"></p>
   </footer>
-
-  <script src="scripts/produtos.js"></script>
-  <script src="scripts/formulario.js"></script>
-  <script src="scripts/rodape.js"></script>
 </body>
 </html>
