@@ -42,6 +42,10 @@ a {
   color: var(--trilha-cobre);
 }
 
+.oculto {
+  display: none;
+}
+
 /* ---------- cabeçalho ---------- */
 
 .cabecalho {
