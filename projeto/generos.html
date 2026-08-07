@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineIndica - Gêneros</title>
+    <meta name="description" content="Explore filmes e séries filtrando por gênero e faixa etária indicativa.">
+    <meta name="author" content="Debora Queiroz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/site.css">
+    <link rel="stylesheet" href="estilos/site-grande.css">
+    <script src="scripts/dados-filmes.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/generos.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">CineIndica</a>
+        <button id="menu-btn" aria-label="Abrir menu"></button>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="generos.html" aria-current="page">Gêneros</a>
+            <a href="criticas.html">Críticas</a>
+            <a href="avaliacoes.html">Avaliações</a>
+            <a href="premios.html">Prêmios</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Gêneros e Faixa Etária</h1>
+        <p class="introducao">Busque por nome ou filtre por gênero e faixa etária indicativa para encontrar o título ideal.</p>
+
+        <form class="busca" id="form-busca" role="search">
+            <label for="busca-titulo">
+                Buscar por nome
+                <input type="search" id="busca-titulo" name="busca" placeholder="Ex: Titanic, Oppenheimer...">
+            </label>
+        </form>
+
+        <div class="filtros" id="filtros-genero">
+            <button data-genero="todos" class="ativo">Todos os gêneros</button>
+        </div>
+
+        <div class="filtros" id="filtros-idade">
+            <button data-idade="todas" class="ativo">Todas as idades</button>
+        </div>
+
+        <div class="grade-filmes" id="grade-generos">
+            <!-- Cards gerados dinamicamente via JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Debora Queiroz - CineIndica</p>
+        <p id="ultimaModificacao"></p>
+        <a href="referencias.html">Referências das imagens e informações</a>
+    </footer>
+
+</body>
+</html>

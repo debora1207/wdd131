@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineIndica - Avaliações</title>
+    <meta name="description" content="Envie sua própria avaliação sobre um filme ou série e veja as avaliações da comunidade.">
+    <meta name="author" content="Debora Queiroz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/site.css">
+    <link rel="stylesheet" href="estilos/site-grande.css">
+    <script src="scripts/dados-filmes.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/avaliacoes.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">CineIndica</a>
+        <button id="menu-btn" aria-label="Abrir menu"></button>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="generos.html">Gêneros</a>
+            <a href="criticas.html">Críticas</a>
+            <a href="avaliacoes.html" aria-current="page">Avaliações</a>
+            <a href="premios.html">Prêmios</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Avaliações</h1>
+        <p class="introducao">Deixe sua avaliação sobre um filme ou série e veja o que a comunidade está achando.</p>
+
+        <h2>Envie sua avaliação</h2>
+        <p id="mensagem-status" aria-live="polite"></p>
+
+        <form id="formulario-avaliacao" method="get">
+            <label for="nome">
+                Seu nome
+                <input type="text" id="nome" name="nome" required>
+            </label>
+
+            <label for="filme">
+                Filme ou série
+                <select id="filme" name="filme" required>
+                    <option value="">Selecione um título</option>
+                </select>
+            </label>
+
+            <label for="nota">
+                Sua nota
+                <select id="nota" name="nota" required>
+                    <option value="">Selecione uma nota</option>
+                    <option value="5">5 - Excelente</option>
+                    <option value="4">4 - Muito bom</option>
+                    <option value="3">3 - Bom</option>
+                    <option value="2">2 - Regular</option>
+                    <option value="1">1 - Fraco</option>
+                </select>
+            </label>
+
+            <label for="data-avaliacao">
+                Data em que assistiu
+                <input type="date" id="data-avaliacao" name="data-avaliacao" required>
+            </label>
+
+            <label for="comentario">
+                Comentário
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+            </label>
+
+            <label for="recomendaria" class="campo-checkbox">
+                <input type="checkbox" id="recomendaria" name="recomendaria">
+                Eu recomendaria este título a um amigo
+            </label>
+
+            <button type="submit">Enviar avaliação</button>
+        </form>
+
+        <h2>Avaliações da comunidade</h2>
+        <div class="lista-avaliacoes" id="lista-avaliacoes">
+            <!-- Avaliações enviadas pelo usuário, carregadas do localStorage -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Debora Queiroz - CineIndica</p>
+        <p id="ultimaModificacao"></p>
+        <a href="referencias.html">Referências das imagens e informações</a>
+    </footer>
+
+</body>
+</html>

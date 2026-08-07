@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineIndica - Prêmios</title>
+    <meta name="description" content="Veja quais filmes e séries do catálogo foram indicados ou venceram Oscar, Globo de Ouro e Emmy.">
+    <meta name="author" content="Debora Queiroz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/site.css">
+    <link rel="stylesheet" href="estilos/site-grande.css">
+    <script src="scripts/dados-filmes.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/premios.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">CineIndica</a>
+        <button id="menu-btn" aria-label="Abrir menu"></button>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="generos.html">Gêneros</a>
+            <a href="criticas.html">Críticas</a>
+            <a href="avaliacoes.html">Avaliações</a>
+            <a href="premios.html" aria-current="page">Prêmios</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Prêmios e Indicações</h1>
+        <p class="introducao">Confira o desempenho dos títulos do catálogo nas principais premiações do audiovisual.</p>
+
+        <table id="tabela-premios">
+            <caption>Prêmios e indicações por título</caption>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Ano</th>
+                    <th>Reconhecimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas geradas dinamicamente via JavaScript -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Debora Queiroz - CineIndica</p>
+        <p id="ultimaModificacao"></p>
+        <a href="referencias.html">Referências das imagens e informações</a>
+    </footer>
+
+</body>
+</html>

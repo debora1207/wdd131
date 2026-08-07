@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineIndica - Início</title>
+    <meta name="description" content="CineIndica: descubra filmes e séries por gênero, faixa etária, críticas e premiações.">
+    <meta name="author" content="Debora Queiroz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/site.css">
+    <link rel="stylesheet" href="estilos/site-grande.css">
+    <script src="scripts/dados-filmes.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/inicio.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">CineIndica</a>
+        <button id="menu-btn" aria-label="Abrir menu"></button>
+        <nav>
+            <a href="index.html" aria-current="page">Início</a>
+            <a href="generos.html">Gêneros</a>
+            <a href="criticas.html">Críticas</a>
+            <a href="avaliacoes.html">Avaliações</a>
+            <a href="premios.html">Prêmios</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>CineIndica</h1>
+        <p class="introducao">Filmes e séries por gênero, faixa etária, críticas e premiações — tudo em um só lugar
+            para você decidir o que assistir.</p>
+
+        <h2>Em destaque</h2>
+        <div class="grade-filmes" id="grade-destaques">
+            <!-- Cards de destaque gerados dinamicamente via JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Debora Queiroz - CineIndica</p>
+        <p id="ultimaModificacao"></p>
+        <a href="referencias.html">Referências das imagens e informações</a>
+    </footer>
+
+</body>
+</html>

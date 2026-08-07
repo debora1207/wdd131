@@ -1,0 +1,34 @@
+@media screen and (min-width: 700px) {
+    header {
+        padding: 1.5rem 2.5rem;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    header nav {
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    header nav a {
+        display: block;
+    }
+
+    .grade-filmes {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    }
+
+    main {
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .grade-filmes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
